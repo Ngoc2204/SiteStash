@@ -1,135 +1,98 @@
 import React from "react";
 import Link from "next/link";
-import { Layers, Mail, Phone, MapPin, Sparkles, CheckCircle2, Github, Shield } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-800/80 bg-slate-950/90 relative overflow-hidden">
-      {/* Background glow decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-gradient-to-b from-primary/10 to-transparent blur-3xl pointer-events-none" />
-
+    <footer className="border-t border-indigo-950/80 bg-[#040611] text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-12">
-          {/* Col 1: Brand & Bio */}
-          <div className="space-y-4 md:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-accent-cyan flex items-center justify-center shadow-lg shadow-primary/30">
-                <Layers className="w-5 h-5 text-white" />
+          {/* Col 1: Brand Info */}
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-400 to-primary flex items-center justify-center font-black text-white text-sm shadow-md">
+                W
               </div>
-              <span className="font-extrabold text-xl tracking-tight text-white">
-                Site<span className="text-primary-400">Stash</span>
+              <span className="font-extrabold text-lg text-white">
+                Web<span className="text-cyan-400">Pro</span>
               </span>
-            </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Hệ sinh thái trưng bày, trải nghiệm thực tế và cho thuê website trọn gói chuẩn SEO dành riêng cho doanh nghiệp SME, cửa hàng và chuyên gia.
+            </Link>
+
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Chúng tôi chuyên thiết kế website chuyên nghiệp, giúp doanh nghiệp tăng trưởng doanh số và khẳng định thương hiệu trên Internet.
             </p>
-            <div className="flex items-center gap-3 pt-2 text-xs text-slate-400">
-              <span className="inline-flex items-center gap-1 text-emerald-400 font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Hệ thống sẵn sàng 99.99%
-              </span>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-2.5 pt-1">
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-colors">
+                <Facebook className="w-3.5 h-3.5" />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-colors">
+                <Twitter className="w-3.5 h-3.5" />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-colors">
+                <Instagram className="w-3.5 h-3.5" />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-cyan-400 transition-colors">
+                <Linkedin className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
-          {/* Col 2: Dịch vụ & Mẫu */}
+          {/* Col 2: Dịch Vụ */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
-              Danh mục nổi bật
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+              Dịch Vụ
             </h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <Link href="/#showcase" className="hover:text-primary-400 transition-colors">
-                  Y tế & Nha khoa thẩm mỹ
-                </Link>
-              </li>
-              <li>
-                <Link href="/#showcase" className="hover:text-primary-400 transition-colors">
-                  F&B, Nhà hàng & Quán Cà phê
-                </Link>
-              </li>
-              <li>
-                <Link href="/#showcase" className="hover:text-primary-400 transition-colors">
-                  Bất Động Sản & Dự án cao cấp
-                </Link>
-              </li>
-              <li>
-                <Link href="/#showcase" className="hover:text-primary-400 transition-colors">
-                  Thời trang & E-Commerce
-                </Link>
-              </li>
-              <li>
-                <Link href="/#showcase" className="hover:text-primary-400 transition-colors">
-                  Công Nghệ SaaS & Portfolio Agency
-                </Link>
-              </li>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="#showcase" className="hover:text-cyan-400 transition-colors">Thiết kế website</a></li>
+              <li><a href="#services" className="hover:text-cyan-400 transition-colors">SEO website</a></li>
+              <li><a href="#services" className="hover:text-cyan-400 transition-colors">Quảng cáo Google</a></li>
+              <li><a href="#services" className="hover:text-cyan-400 transition-colors">Quản trị website</a></li>
             </ul>
           </div>
 
-          {/* Col 3: Cam kết trọn gói */}
+          {/* Col 3: Hỗ Trợ */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
-              Gói dịch vụ WaaS
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+              Hỗ Trợ
             </h4>
-            <ul className="space-y-2.5 text-sm text-slate-400">
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Bao gồm Cloud Server & Hosting tốc độ cao</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Miễn phí chứng chỉ bảo mật SSL HTTPS</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Hỗ trợ bảo trì & sao lưu dữ liệu tự động</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Bàn giao toàn bộ mã nguồn khi mua trọn gói</span>
-              </li>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="/pricing" className="hover:text-cyan-400 transition-colors">Hướng dẫn sử dụng</a></li>
+              <li><a href="/pricing" className="hover:text-cyan-400 transition-colors">Chính sách bảo mật</a></li>
+              <li><a href="/pricing" className="hover:text-cyan-400 transition-colors">Điều khoản dịch vụ</a></li>
+              <li><a href="/pricing" className="hover:text-cyan-400 transition-colors">Câu hỏi thường gặp</a></li>
             </ul>
           </div>
 
-          {/* Col 4: Liên hệ & Hỗ trợ */}
+          {/* Col 4: Đăng Ký Nhận Tin */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
-              Kênh liên hệ hỗ trợ
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+              Đăng Ký Nhận Tin
             </h4>
-            <ul className="space-y-2.5 text-sm text-slate-400">
-              <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Hotline / Zalo: 0912.345.678</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Email: contact@sitestash.io</span>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-primary-400 shrink-0" />
-                <span>Hà Nội & TP. Hồ Chí Minh, Việt Nam</span>
-              </li>
-            </ul>
-            <div className="pt-2">
-              <Link
-                href="https://github.com/Ngoc2204/SiteStash"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-white px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors"
-              >
-                <Github className="w-3.5 h-3.5" />
-                <span>Source on GitHub</span>
-              </Link>
+            <p className="text-xs text-slate-400">
+              Nhận thông tin khuyến mãi mới nhất về thiết kế web và marketing.
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Nhập email của bạn"
+                className="flex-1 px-3.5 py-2 rounded-xl text-xs glass-input placeholder:text-slate-500 focus:outline-none"
+              />
+              <button className="btn-gradient-purple px-4 py-2 rounded-xl text-xs font-bold shrink-0">
+                Đăng ký
+              </button>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2026 SiteStash Platform. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-indigo-950/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+          <p>© 2024 WebPro. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/pricing" className="hover:text-slate-300">Bảng giá</Link>
-            <Link href="/contact" className="hover:text-slate-300">Hỗ trợ kỹ thuật</Link>
-            <Link href="/admin/dashboard" className="hover:text-slate-300">Quản trị viên</Link>
+            <Link href="/sitemap.xml" className="hover:text-slate-400">Sitemap</Link>
+            <Link href="/pricing" className="hover:text-slate-400">Privacy</Link>
+            <Link href="/pricing" className="hover:text-slate-400">Terms</Link>
           </div>
         </div>
       </div>

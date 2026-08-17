@@ -1,84 +1,94 @@
 import React from "react";
-import { Search, Eye, Sparkles, Rocket, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { MessageSquare, Layout, Code, CheckCircle, Headphones, Sparkles } from "lucide-react";
 
 export function ProcessSection() {
   const steps = [
     {
-      number: "01",
-      title: "Trải nghiệm & Chọn mẫu",
-      description: "Xem thử trực tiếp trên điện thoại & máy tính bằng Live Demo Viewer để kiểm tra tốc độ và giao diện thực tế.",
-      icon: Eye,
-      gradient: "from-blue-500 to-cyan-500",
+      num: "01",
+      title: "Tư Vấn & Phân Tích",
+      desc: "Lắng nghe nhu cầu và tư vấn giải pháp phù hợp",
+      icon: MessageSquare,
+      color: "from-purple-600 to-pink-500",
+      border: "border-purple-500",
     },
     {
-      number: "02",
-      title: "Đăng ký gói & Gửi yêu cầu",
-      description: "Chọn gói thuê theo tháng hoặc năm. Cung cấp tên miền, logo, bảng giá và nội dung mong muốn của thương hiệu bạn.",
-      icon: Sparkles,
-      gradient: "from-cyan-500 to-indigo-500",
+      num: "02",
+      title: "Thiết Kế UI/UX",
+      desc: "Thiết kế giao diện độc quyền, trải nghiệm tuyệt vời",
+      icon: Layout,
+      color: "from-purple-600 to-indigo-600",
+      border: "border-purple-500",
     },
     {
-      number: "03",
-      title: "Kỹ thuật bàn giao trong 24h",
-      description: "Đội ngũ SiteStash cấu hình hosting tốc độ cao, cài đặt SSL bảo mật, trỏ tên miền và hoàn thiện nội dung theo yêu cầu.",
-      icon: Rocket,
-      gradient: "from-indigo-500 to-purple-500",
+      num: "03",
+      title: "Lập Trình & SEO",
+      desc: "Lập trình chuẩn SEO, tương thích mọi thiết bị",
+      icon: Code,
+      color: "from-blue-600 to-cyan-500",
+      border: "border-cyan-500",
     },
     {
-      number: "04",
-      title: "Vận hành an tâm & Hỗ trợ",
-      description: "Website hoạt động 24/7/365. Hệ thống tự động sao lưu dữ liệu, bảo trì máy chủ và hỗ trợ kỹ thuật trọn đời hợp đồng.",
-      icon: ShieldCheck,
-      gradient: "from-purple-500 to-pink-500",
+      num: "04",
+      title: "Kiểm Thử & Bàn Giao",
+      desc: "Kiểm tra kỹ lưỡng và bàn giao đúng hẹn",
+      icon: CheckCircle,
+      color: "from-cyan-600 to-teal-500",
+      border: "border-cyan-500",
+    },
+    {
+      num: "05",
+      title: "Hỗ Trợ & Bảo Trì",
+      desc: "Hỗ trợ 24/7, bảo trì định kỳ miễn phí",
+      icon: Headphones,
+      color: "from-cyan-500 to-blue-600",
+      border: "border-cyan-500",
     },
   ];
 
   return (
-    <section id="process" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
-      <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <span className="text-xs uppercase font-bold tracking-widest text-primary-400 bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
-          Quy Trình Triển Khai 4 Bước
-        </span>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Sở Hữu Website Chuyên Nghiệp Chỉ Sau 24 Giờ
-        </h2>
-        <p className="text-sm text-slate-400">
-          Không cần biết lập trình, không mất phí hàng chục triệu cho agency, quy trình chuẩn hóa giúp doanh nghiệp tiết kiệm 90% thời gian & chi phí.
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-indigo-950/80">
+      {/* Section Header */}
+      <div className="text-center space-y-3 mb-16">
+        <div className="flex items-center justify-center gap-2 text-2xl sm:text-3xl font-black text-white">
+          <span className="text-amber-400">✨</span>
+          <span>Quy Trình Thiết Kế Website</span>
+          <span className="text-amber-400">✨</span>
+        </div>
+        <p className="text-xs sm:text-sm text-slate-400">
+          Quy trình <span className="text-cyan-400 font-bold">chuyên nghiệp</span>, <span className="text-purple-400 font-bold">minh bạch</span>, đảm bảo chất lượng
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {steps.map((step, index) => {
+      {/* 5-Step Process Horizontal Nodes */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+        {steps.map((step, idx) => {
           const Icon = step.icon;
           return (
             <div
-              key={step.number}
-              className="glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between relative group"
+              key={step.num}
+              className="glass-card rounded-2xl p-5 border border-indigo-950/80 flex flex-col items-center text-center space-y-4 relative group hover:border-purple-500/50"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div
-                    className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${step.gradient} flex items-center justify-center text-white shadow-lg`}
-                  >
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <span className="text-3xl font-black text-slate-800 group-hover:text-slate-700 transition-colors font-mono">
-                    {step.number}
-                  </span>
+              {/* Circular Node Icon */}
+              <div
+                className={`w-14 h-14 rounded-full bg-gradient-to-tr ${step.color} p-0.5 shadow-xl flex items-center justify-center relative`}
+              >
+                <div className="w-full h-full rounded-full bg-[#0d1127] flex items-center justify-center text-white">
+                  <Icon className="w-6 h-6 text-cyan-300" />
                 </div>
-
-                <h3 className="text-lg font-bold text-white group-hover:text-primary-300 transition-colors">
-                  {step.title}
-                </h3>
-
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {step.description}
-                </p>
+                {/* Number Badge */}
+                <div className="absolute -bottom-2 bg-slate-900 border border-slate-700 text-[10px] font-black text-white px-2 py-0.5 rounded-full font-mono">
+                  {step.num}
+                </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center gap-1.5 text-[11px] text-emerald-400">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Cam kết chuẩn xác</span>
+              {/* Title & Description */}
+              <div className="space-y-1.5 pt-1">
+                <h4 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  {step.title}
+                </h4>
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             </div>
           );

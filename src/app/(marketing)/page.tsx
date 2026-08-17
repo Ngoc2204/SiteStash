@@ -2,12 +2,12 @@ import React from "react";
 import { getCategories, getTemplates } from "@/lib/db";
 import { HeroSection } from "@/components/showcase/hero-section";
 import { ShowcaseClient } from "@/components/showcase/showcase-client";
-import { ComparisonSection } from "@/components/showcase/comparison-section";
 import { ProcessSection } from "@/components/showcase/process-section";
-import { TestimonialsSection } from "@/components/showcase/testimonials-section";
+import { PricingSection } from "@/components/showcase/pricing-section";
+import { WhyChooseSection } from "@/components/showcase/why-choose-section";
 import { CtaBanner } from "@/components/showcase/cta-banner";
 
-export const revalidate = 60; // Revalidate every 60 seconds
+export const revalidate = 60;
 
 export default async function HomePage() {
   const [categories, templates] = await Promise.all([
@@ -16,26 +16,26 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div className="space-y-6">
-      {/* 1. Hero Section with Live Mockup Switcher & Key Metrics */}
+    <div className="space-y-4">
+      {/* 1. Hero Section */}
       <HeroSection />
 
-      {/* 2. Main Showcase Catalog with Live Filtering & Order Modal */}
+      {/* 2. Kho Mẫu Website Đẹp */}
       <ShowcaseClient
         categories={categories}
         initialTemplates={templates}
       />
 
-      {/* 3. Competitive Advantage & Solution Comparison Matrix */}
-      <ComparisonSection />
-
-      {/* 4. Four-Step WaaS Workflow & Timeline */}
+      {/* 3. Quy Trình Thiết Kế Website (5 Bước) */}
       <ProcessSection />
 
-      {/* 5. Social Proof & Customer Testimonials */}
-      <TestimonialsSection />
+      {/* 4. Bảng Giá Ưu Đãi (3 Gói) */}
+      <PricingSection />
 
-      {/* 6. High-Conversion Final CTA Banner */}
+      {/* 5. Tại Sao Chọn WebPro? (4 Thẻ) */}
+      <WhyChooseSection />
+
+      {/* 6. CTA Banner (Tên lửa & Giảm 20%) */}
       <CtaBanner />
     </div>
   );
