@@ -9,7 +9,7 @@ interface LottieLoaderProps {
   text?: string;
 }
 
-export function LottieLoader({ size = "md", className = "", text = "Đang tải..." }: LottieLoaderProps) {
+export function LottieLoader({ size = "md", className = "", text }: LottieLoaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,18 +30,18 @@ export function LottieLoader({ size = "md", className = "", text = "Đang tải.
 
   const sizeClasses = {
     sm: "w-16 h-16",
-    md: "w-28 h-28",
-    lg: "w-44 h-44",
-    xl: "w-60 h-60",
+    md: "w-24 h-24",
+    lg: "w-36 h-36",
+    xl: "w-48 h-48",
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
-      <div className={`${sizeClasses[size]} relative flex items-center justify-center`}>
-        <div ref={containerRef} className="w-full h-full" />
+    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
+      <div className={`${sizeClasses[size]} relative flex items-center justify-center overflow-hidden`}>
+        <div ref={containerRef} className="w-full h-full flex items-center justify-center" />
       </div>
       {text && (
-        <p className="text-xs font-semibold tracking-wider text-slate-300 uppercase animate-pulse">
+        <p className="text-xs font-semibold tracking-wider text-slate-400 uppercase animate-pulse">
           {text}
         </p>
       )}

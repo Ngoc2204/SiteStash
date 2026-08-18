@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { GlobalPageLoader } from "@/components/ui/global-page-loader";
 
 export const metadata: Metadata = {
   title: "WebPro - Dịch Vụ Thiết Kế Website Chuyên Nghiệp | Bán Hàng Chỉ Sau 24h",
@@ -40,7 +39,6 @@ export default function RootLayout({
   return (
     <html lang="vi" className="dark">
       <body className="antialiased selection:bg-purple-500/30 selection:text-white">
-        <GlobalPageLoader />
         {children}
       </body>
     </html>
