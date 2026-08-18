@@ -1,39 +1,33 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { GlobalPageLoader } from "@/components/ui/global-page-loader";
 
 export const metadata: Metadata = {
-  title: "SiteStash - Nền Tảng Trưng Bày & Cho Thuê Giao Diện Website Trọn Gói (WaaS)",
+  title: "WebPro - Dịch Vụ Thiết Kế Website Chuyên Nghiệp | Bán Hàng Chỉ Sau 24h",
   description:
-    "Kho website mẫu chuẩn SEO, đa ngành nghề (Nha khoa, F&B, Bất động sản, Thời trang, SaaS). Trải nghiệm trực tiếp qua Live Demo Viewer và thuê trọn gói bao hosting từ 250k/tháng.",
+    "Kho website mẫu chuẩn SEO, đa dạng ngành nghề. Trải nghiệm trực tiếp qua Live Demo Viewer và sở hữu website chuyên nghiệp chỉ sau 24 giờ.",
   keywords: [
-    "thuê website",
-    "mua template website",
-    "waas",
-    "website as a service",
-    "mẫu website đẹp",
-    "thiết kế website giá rẻ",
+    "thiết kế website",
+    "webpro",
     "sitestash",
+    "mẫu website đẹp",
+    "thuê website",
+    "waas",
     "live demo viewer",
   ],
-  authors: [{ name: "SiteStash Team" }],
+  authors: [{ name: "WebPro Team" }],
   openGraph: {
-    title: "SiteStash - Nền Tảng Cho Thuê & Trưng Bày Website Trọn Gói",
-    description:
-      "Website đẹp đỉnh cao có ngay trong 24 giờ. Trải nghiệm trực tiếp trên điện thoại và máy tính trước khi thuê.",
+    title: "WebPro - Dịch Vụ Thiết Kế Website Chuyên Nghiệp",
+    description: "Website đẹp đẳng cấp, bán hàng chỉ sau 24 giờ.",
     url: "https://sitestash.vercel.app",
-    siteName: "SiteStash",
+    siteName: "WebPro",
     locale: "vi_VN",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SiteStash - Nền Tảng Cho Thuê Website Trọn Gói",
-    description: "Trải nghiệm trực tiếp Live Demo Viewer và thuê website chuẩn SEO chỉ từ 250k/tháng.",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#090d16",
+  themeColor: "#060814",
   width: "device-width",
   initialScale: 1,
 };
@@ -45,7 +39,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className="dark">
-      <body className="antialiased selection:bg-primary/30 selection:text-white">
+      <body className="antialiased selection:bg-purple-500/30 selection:text-white">
+        <GlobalPageLoader />
         {children}
       </body>
     </html>
