@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { usePreviewStore } from "@/hooks/use-preview-store";
-import { LottieLoader } from "@/components/ui/lottie-loader";
+import { Loader2 } from "lucide-react";
 
 interface DeviceFrameProps {
   demoUrl: string;
@@ -45,10 +45,11 @@ export function DeviceFrame({ demoUrl, title }: DeviceFrameProps) {
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-slate-800 border border-slate-700 z-30" />
         )}
 
-        {/* Loading Lottie Animation */}
+        {/* Loading Spinner */}
         {isLoading && (
-          <div className="absolute inset-0 bg-[#060814]/95 backdrop-blur-md z-20 flex flex-col items-center justify-center space-y-4">
-            <LottieLoader size="lg" text={`Đang tải demo: ${title}...`} />
+          <div className="absolute inset-0 bg-[#060814]/90 backdrop-blur-md z-20 flex flex-col items-center justify-center space-y-3">
+            <Loader2 className="w-8 h-8 text-cyan-400 animate-spin" />
+            <p className="text-xs text-slate-400 font-medium">Đang tải bản xem thử: {title}...</p>
           </div>
         )}
 
