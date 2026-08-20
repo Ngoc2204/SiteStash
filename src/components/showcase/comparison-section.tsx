@@ -6,7 +6,7 @@ export function ComparisonSection() {
   const criteria = [
     {
       title: "Chi phí ban đầu",
-      sitestash: "Chỉ từ 250.000₫ / tháng (0đ phí setup)",
+      sitestash: "Chi phí linh hoạt (0đ phí setup)",
       agency: "15.000.000₫ - 30.000.000₫ trả trước",
       diy: "Tốn 3.000.000₫ mua theme, plugin, hosting",
     },

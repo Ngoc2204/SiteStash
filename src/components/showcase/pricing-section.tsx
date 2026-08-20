@@ -6,7 +6,7 @@ export function PricingSection() {
   const plans = [
     {
       name: "CƠ BẢN",
-      price: "4.900.000đ",
+      price: "Liên hệ",
       sub: "Phù hợp cho cá nhân, startup",
       features: [
         "Thiết kế giao diện đẹp",
@@ -16,12 +16,12 @@ export function PricingSection() {
         "Hỗ trợ 3 tháng",
       ],
       popular: false,
-      cta: "Chọn gói này",
+      cta: "Liên hệ ngay",
       href: "/contact",
     },
     {
       name: "CHUYÊN NGHIỆP",
-      price: "8.900.000đ",
+      price: "Liên hệ",
       sub: "Phù hợp cho doanh nghiệp vừa và nhỏ",
       badge: "PHỔ BIẾN",
       features: [
@@ -33,12 +33,12 @@ export function PricingSection() {
         "Tích hợp chat, form, map",
       ],
       popular: true,
-      cta: "Chọn gói này",
+      cta: "Liên hệ ngay",
       href: "/contact",
     },
     {
       name: "CAO CẤP",
-      price: "15.900.000đ",
+      price: "Liên hệ",
       sub: "Phù hợp cho doanh nghiệp lớn",
       features: [
         "Tất cả tính năng chuyên nghiệp",
